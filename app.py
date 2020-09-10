@@ -1,10 +1,19 @@
 import praw, os, requests, json
 
 def discordPush(submission):
+    content = ""
+    image = ""
+    if "i.redd" in submission.url:
+        image = submission.url
+    elif "v.redd" in submission.url:
+        content = "Reddit Video : " + submission.url
+    else:
+        content = submission.selftext
+
     data = {
         "username": os.getenv("DISCORD_WEBHOOK_NAME"), # edit this yourself
         "avatar_url": os.getenv("DISCORD_WEBHOOK_AVATAR"), # edit this yourself
-        "content": "",
+        "content": content,
         "embeds": [
             {
                 "author": {
@@ -14,7 +23,7 @@ def discordPush(submission):
                 "title": str(submission.title),
                 "url": "https://www.reddit.com" + str(submission.permalink),
                 "image": {
-                    "url": submission.url
+                    "url": image
                 }
             }
         ]
