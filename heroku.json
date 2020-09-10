@@ -1,0 +1,31 @@
+{
+  "name": "reddit-watcher",
+  "description": "have an eyes on subreddit, always get latest post.",
+  "image": "heroku/python",
+  "repository": "https://github.com/gfjaru/reddit-watcher",
+  "keywords": ["python"],
+  "addons": [ ],
+  "env": {
+    "DISCORD_WEBHOOK_URL": {
+      "description": "Discord channel webhook url."
+    },
+    "DISCORD_WEBHOOK_NAME": {
+      "description": "Webhook username."
+    },
+    "DISCORD_WEBHOOK_AVATAR": {
+      "description": "Webhook avatar url."
+    },
+    "REDDIT_CLIENT_ID": {
+      "description": "Your reddit client id for the application dev."
+    },
+    "REDDIT_CLIENT_SECRET": {
+      "description": "Your reddit client secret for the application dev."
+    },
+    "REDDIT_USERNAME": {
+      "description": "Your reddit username for the application dev."
+    },
+    "REDDIT_PASSWORD": {
+      "description": "Your reddit password for the application dev."
+    }
+  }
+}
