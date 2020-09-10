@@ -8,12 +8,12 @@ def discordPush(submission):
     elif "v.redd" in submission.url:
         content = "Reddit Video : " + submission.url
     else:
-        content = submission.selftext
+        content = submission.selftext[:2047]
 
     data = {
         "username": os.getenv("DISCORD_WEBHOOK_NAME"), # edit this yourself
         "avatar_url": os.getenv("DISCORD_WEBHOOK_AVATAR"), # edit this yourself
-        "content": content,
+        "content": "",
         "embeds": [
             {
                 "author": {
@@ -22,6 +22,7 @@ def discordPush(submission):
                 },
                 "title": str(submission.title),
                 "url": "https://www.reddit.com" + str(submission.permalink),
+                "description": content,
                 "image": {
                     "url": image
                 }
