@@ -8,7 +8,7 @@ def discordPush(submission):
     elif "v.redd" in submission.url:
         content = "Reddit Video : " + submission.url
     else:
-        content = "[ " + submission.url + " ]" + submission.selftext[:1024]
+        content = "[ " + submission.url + " ]\n" + submission.selftext[:1024]
 
     data = {
         "username": os.getenv("DISCORD_WEBHOOK_NAME"), # edit this yourself
