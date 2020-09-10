@@ -5,6 +5,8 @@ def discordPush(submission):
     image = ""
     if "i.redd" in submission.url:
         image = submission.url
+    elif "i.imgur" in submission.url:
+        image = submission.url
     elif "v.redd" in submission.url:
         content = "Reddit Video : " + submission.url
     else:
