@@ -34,7 +34,7 @@ app = praw.Reddit(client_id=os.getenv("REDDIT_CLIENT_ID"),
 
 last="" ## quite surprising, low effort logic has been created
 
-subreddit = app.subreddit("Hololive")
+subreddit = app.subreddit(os.getenv("REDDIT_SUBREDDIT"))
 while 1:
     for submission in subreddit.new(limit=1):
         if last != submission:

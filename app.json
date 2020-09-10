@@ -6,6 +6,9 @@
   "keywords": ["python"],
   "addons": [ ],
   "env": {
+    "REDDIT_SUBREDDIT": {
+      "description": "Subreddit (without r/, example r/Indonesian -> Indonesian)"
+    },
     "DISCORD_WEBHOOK_URL": {
       "description": "Discord channel webhook url."
     },

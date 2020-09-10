@@ -13,6 +13,7 @@
 - REDDIT_CLIENT_SECRET
 - REDDIT_USERNAME
 - REDDIT_PASSWORD
+- REDDIT_SUBREDDIT
 
 Then install dependencies, just type
 
@@ -26,6 +27,8 @@ Run the app.
 ## Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+***idk how to deal with this, run worker manually after deploying, go to heroku app > resource > worker
 
 
 ---
