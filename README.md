@@ -5,6 +5,7 @@
 ## Requirements
 
 API Keys of course, get one here -> https://www.reddit.com/prefs/apps
+
 Discord webhook -> https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
 
 ## Installation
