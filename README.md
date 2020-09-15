@@ -30,6 +30,8 @@ Run the app.
 
 ***idk how to deal with this, run worker manually after deploying, go to heroku app > resource > worker
 
+Watchout for free users, workers never sleep, free user without verified credit card got 400hours per month
+
 
 ---
 
